@@ -4,7 +4,7 @@
     "lib": ["es2020", "dom"],
     "sourceMap": true,
     "moduleResolution": "node",
-    "outDir": "..",
+    "outDir": "../..",
     "experimentalDecorators": true
   },
   "files": [
