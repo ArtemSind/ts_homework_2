@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["es2020", "dom"],
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "outDir": "..",
+    "experimentalDecorators": true
+  },
+  "files": [
+    "./index.ts"
+  ],
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "compileOnSave": true
+}
