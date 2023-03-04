@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './index.ts',
+    entry: 'travelShop/app/services/modal/modalService.ts',
     module: {
         rules: [
             {

@@ -2,10 +2,11 @@ function openModal(id = null): void {
     const template = "<div>MyModal</div>";
     const modal = new Modal(id);
     modal.open(template);
+
 }
 
 function removeModal(): void {
-
+    Modal.removeById();
 }
 
 function openModalSecond(id = null) {
@@ -15,12 +16,18 @@ function openModalSecond(id = null) {
 }
 
 
-
 class Modal {
     private readonly id: string;
     public static modals: any[] = [];  // массив всех экземпляров класса modalService;
 
     constructor(id = null) {
+
+        const findModal = Modal.modals.find(m => m.id === id);
+
+        if (findModal) {
+            Modal.removeById(id);
+        }
+
         Modal.modals.push(this);
         console.log("ModelService.modals", Modal.modals);
         this.id = id || (Math.random() + Modal.modals.length)
